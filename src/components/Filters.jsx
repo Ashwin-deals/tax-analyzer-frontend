@@ -28,7 +28,7 @@ export default function Filters({ selectedCategory, filters, onCategoryChange, o
           <div className="relative">
             <Search className="absolute left-3 top-2.5 text-slate-400" size={18} />
             <input
-              className="w-full rounded-lg border border-slate-200 py-2 pl-10 pr-3 text-sm outline-none focus:border-slate-400 md:w-64"
+              className="w-full rounded-lg border border-slate-200 py-2 pl-10 pr-3 text-sm outline-none focus:border-slate-400 md:w-72 xl:w-96"
               placeholder="Search transactions"
               value={filters.search}
               onChange={(event) => onFiltersChange({ ...filters, search: event.target.value })}

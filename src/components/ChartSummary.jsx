@@ -13,7 +13,7 @@ export default function ChartSummary({ summary }) {
   const max = Math.max(...categories.map((item) => counts[item.key] || 0), 1);
 
   return (
-    <section className="grid gap-5 lg:grid-cols-[1.4fr_1fr]">
+    <section className="grid gap-5 lg:grid-cols-[minmax(0,1.5fr)_minmax(340px,0.8fr)] 2xl:grid-cols-[minmax(0,1.7fr)_minmax(380px,0.7fr)]">
       <div className="rounded-xl bg-white p-5 shadow-card">
         <h2 className="mb-4 text-lg font-bold text-slate-900">Category Distribution</h2>
         <div className="space-y-4">

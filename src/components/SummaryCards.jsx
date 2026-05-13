@@ -9,7 +9,7 @@ export default function SummaryCards({ summary }) {
     <div className="space-y-5">
       <section>
         <h2 className="mb-3 text-lg font-bold text-slate-900">Classification Summary</h2>
-        <div className="grid gap-4 md:grid-cols-5">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           <KpiCard label="Total" value={summary?.totalTransactions || 0} tone="indigo" />
           {categories.map((category) => (
             <KpiCard
@@ -24,7 +24,7 @@ export default function SummaryCards({ summary }) {
 
       <section>
         <h2 className="mb-3 text-lg font-bold text-slate-900">Amount Summary</h2>
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           <KpiCard label="Total Debit" value={formatMoney(totals.debit)} tone="indigo" money />
           <KpiCard label="Total Credit" value={formatMoney(totals.credit)} tone="blue" money />
           <KpiCard label="Total Deposit" value={formatMoney(totals.deposit)} tone="green" money />
